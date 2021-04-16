@@ -19,8 +19,6 @@ public class LocalVenta {
   // Req 3 //
 
   public double gananciasDia(Date dia) {
-    List<Item> items = this.totalVentasDia(dia).stream().map(Venta::getItems)
-        .collect(Collectors.toList()).get(1);
-    return items.stream().mapToDouble(Item::totalPorPrenda).sum();
+    return this.totalVentasDia(dia).stream().mapToDouble(Venta::costoVenta).sum();
   }
 }

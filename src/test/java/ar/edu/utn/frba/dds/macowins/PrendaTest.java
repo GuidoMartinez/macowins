@@ -38,8 +38,8 @@ public class PrendaTest {
     return new Prenda(new Promocion(descuento),precioBase,TipoPrenda.PANTALON);
   }
 
-
   private Prenda camisaNueva(double precioBase) {
+
     return new Prenda(new Nueva(),precioBase,TipoPrenda.CAMISA);
   }
 

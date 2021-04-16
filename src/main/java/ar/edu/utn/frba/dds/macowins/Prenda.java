@@ -11,12 +11,14 @@ public class Prenda {
     this.tipo = tipo;
   }
   // Req 1 //
+
   public Double precio() {
     return estado.precioFinal(precioBase);
 
   }
 
   // Req 2 //
+
   public TipoPrenda getTipo() {
     return this.tipo;
   }
