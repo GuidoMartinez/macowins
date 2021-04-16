@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PrendaTest {
-
+  
   @Test
   public void elTipoDeUnaCamisaNuevaEsCAMISA() {
     assertEquals(camisaNueva(200).getTipo().toString(), "CAMISA");
@@ -33,19 +33,18 @@ public class PrendaTest {
     assertEquals(pantalonEnPromocion(1500, 100).precio(), 1400, 0);
   }
 
-  private Prenda pantalonEnPromocion(int precioBase, int descuento) {
-    // TODO completar
-    return null;
+  private Prenda pantalonEnPromocion(double precioBase, int descuento) {
+
+    return new Prenda(new Promocion(descuento),precioBase,TipoPrenda.PANTALON);
   }
 
 
   private Prenda camisaNueva(double precioBase) {
-    // TODO completar
-    return null;
+    return new Prenda(new Nueva(),precioBase,TipoPrenda.CAMISA);
   }
 
   private Prenda sacoEnLiquidacion(double precioBase) {
-    // TODO completar
-    return null;
+
+    return new Prenda(new Liquidacion(),precioBase,TipoPrenda.SACO);
   }
 }
